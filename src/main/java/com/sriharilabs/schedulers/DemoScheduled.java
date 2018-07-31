@@ -27,4 +27,19 @@ public class DemoScheduled {
 		}
 		
 	}
+	
+
+	@Scheduled(fixedRate = 200)
+	@Async("taskScheduler2")
+	//@Scheduled(cron = "*/1 * * * * *")
+	public void show1() {
+		System.out.println(new Date()+ "show1 ::"+Thread.currentThread().getName());
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }
