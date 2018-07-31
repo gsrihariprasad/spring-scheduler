@@ -1,0 +1,47 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.sriharilabs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.0.4.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework/spring-jms
+//compile group: 'org.springframework', name: 'spring-jms', version: '5.0.8.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix
+//compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.5.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix-dashboard
+//compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.5.RELEASE'
+//compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.0.4.RELEASE'
+
+	
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+//compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.4.RELEASE'
+
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix
+//compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.0.0.RELEASE'
+
+	
+}
